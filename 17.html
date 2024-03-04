@@ -12,7 +12,7 @@
             margin: 0 auto;
             position: relative;
         }
-        .slider-wrapper {
+        .slider__wrapper {
             overflow: hidden;
         }
         .slider__container {
@@ -23,7 +23,7 @@
         }
 
         .slider__item {
-            display: none;
+            /*display: none;*/
             flex-shrink: 0;
             flex-grow: 1;
             flex-basis: 100%;
@@ -62,15 +62,14 @@
         .slider__btn_next {
             right: 0;
         }
-        .slider__btn_active {
-            display: block;
+        .slider__btn_hidden {
+            display: none;
         }
-
     </style>
 </head>
 <body>
-<div class="slider" >
-    <div class="slider-wrapper">
+<div class="slider">
+    <div class="slider__wrapper">
         <div class="slider__container" id="slider">
             <div class="slider__item">
                 <img src="img/mop.png" alt="мопс 1">
@@ -116,22 +115,31 @@
 
 <script>
     class Slider {
-        constructor(nameSliderItems, btnPrev, btnNext) {
+        constructor(nameSliderItems, btnPrev, btnNext, idSlider) {
             this.slides = document.getElementsByClassName(nameSliderItems);
             this.index = 0;
+            this.width = 0;
+            this.widthAll = 0;
+            this.slider = document.getElementById(idSlider);
             this.btnPrev = document.getElementsByClassName(btnPrev)[0];
             this.btnNext = document.getElementsByClassName(btnNext)[0];
-
             this.btnPrev.addEventListener('click', this.prev.bind(this));
             this.btnNext.addEventListener('click', this.next.bind(this));
+            for (let i = 0; i < this.slides.length; i++) {
+                this.widthAll += this.slides[i].offsetWidth;
+            }
+
+            this.changeBtn();
         }
         show (index) {
-            if (index > this.slides.length-1) {
+            if (index > this.slides.length - 1) {
+                console.log(index )
                 this.index = 1;
+                this.width = 0;
             }
 
             if (index < 1) {
-                this.index = this.slides.length-1
+                this.index = this.slides.length - 1
             }
 
             let i = 0;
@@ -144,14 +152,37 @@
 
         next () {
             this.show(this.index += 1);
+            this.width += this.slides[this.index].offsetWidth;
+            this.changePosition()
         }
 
         prev () {
             this.show(this.index -= 1);
+            this.width -= this.slides[this.index].offsetWidth;
+            this.changePosition()
         }
-    }
 
-    let slider = new Slider('slider__item', 'slider__btn_prev', 'slider__btn_next');
+        changeBtn () {
+            if (this.width + this.slides[this.index].offsetWidth >= this.widthAll) {
+                this.btnNext.className =  this.btnNext.className.replace('', ' slider__btn_hidden ');
+            } else {
+                this.btnNext.className =  this.btnNext.className.replace(' slider__btn_hidden ', '');
+            }
+
+            if (this.width === 0) {
+                this.btnPrev.className =  this.btnPrev.className.replace('', ' slider__btn_hidden ');
+            } else {
+                this.btnPrev.className =  this.btnPrev.className.replace(' slider__btn_hidden ', '');
+            }
+        }
+
+        changePosition () {
+            this.changeBtn();
+            this.slider.setAttribute('style', `transform: translate3d(${-this.width}px, 0px, 0px)`);
+        }
+     }
+
+    let slider = new Slider('slider__item', 'slider__btn_prev', 'slider__btn_next', 'slider');
     slider.show(0);
 </script>
 </body>
