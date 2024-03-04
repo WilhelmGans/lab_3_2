@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .nav, .nav__container-2 {
+            text-decoration: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            padding: 0 10px 0 10px;
+        }
+        .nav {
+            display: flex;
+            flex-direction: row;
+            gap:15px;
+        }
+        .nav__element-1 {
+            cursor: pointer;
+            background-color: #198754;
+            padding: 15px;
+        }
+        .nav__container-2 {
+            display: none;
+            background-color: cadetblue;
+            padding: 15px;
+        }
+        .nav__element-2 {
+            padding: 15px;
+        }
+        .nav__element-1_more {
+            position: relative;
+        }
+        .nav__element-1_more:hover .nav__container-2 {
+            display: block;
+            position: absolute;
+            top:48px;
+            left: 0;
+        }
+        .nav__element-1:hover, .nav__element-2:hover {
+            background-color: rgba(197, 115, 115, 0.91);
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <ul class="nav">
+        <li class="nav__element-1">Домой</li>
+        <li class="nav__element-1 nav__element-1_more">Меч
+            <ul class="nav__container-2">
+                <li class="nav__element-2">Световой</li>
+                <li class="nav__element-2">Одноручный</li>
+                <li class="nav__element-2">Двуручный</li>
+                <li class="nav__element-2">Фламберг</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
