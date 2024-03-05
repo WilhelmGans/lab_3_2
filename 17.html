@@ -144,10 +144,10 @@
 
             let i = 0;
             for (i; i < this.slides.length; i++) {
-                this.slides[i].className = this.slides[i].className.replace(' slider__btn_active ', '');
+                this.slides[i].className = this.slides[i].className.replace(' slider__item_active ', '');
             }
 
-            this.slides[this.index].className = this.slides[this.index].className.replace('', ' slider__btn_active ');
+            this.slides[this.index].className = this.slides[this.index].className.replace('', ' slider__item_active ');
         }
 
         next () {
