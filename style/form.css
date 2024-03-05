@@ -25,6 +25,12 @@
     font-size: 1em;
     padding: 2px 10px 2px 10px;
 }
+
+.form__input_error {
+    color: var(--red);
+    border-color: var(--red);
+}
+
 .form__group {
     display: flex;
     flex-direction: column;

@@ -50,25 +50,25 @@
         let isValid = true;
         
         if (name === '') {
-            nameInput.classList.add('error');
+            nameInput.classList.add('form__input_error');
             isValid = false;
         } else {
-            nameInput.classList.remove('error');
+            nameInput.classList.remove('form__input_error');
         }
         
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.match(emailPattern)) {
-            emailInput.classList.add('error');
+            emailInput.classList.add('form__input_error');
             isValid = false;
         } else {
-            emailInput.classList.remove('error');
+            emailInput.classList.remove('form__input_error');
         }
         
         if (password.length < 6) {
-            passwordInput.classList.add('error');
+            passwordInput.classList.add('form__input_error');
             isValid = false;
         } else {
-            passwordInput.classList.remove('error');
+            passwordInput.classList.remove('form__input_error');
         }
 
         return isValid;
