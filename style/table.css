@@ -1,0 +1,12 @@
+table {
+    border: 2px solid rgb(140 140 140);
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+tbody tr:nth-child(odd) {
+    background-color: #ddd;
+}

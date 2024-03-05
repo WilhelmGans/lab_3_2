@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style/form.css" rel="stylesheet">
+    <link href="style/btn.css" rel="stylesheet">
+    <link href="style/var.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/table.css">
+</head>
+<head>
+    <title>Табличное представление данных</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            cursor: pointer;
+        }
+
+        .filter-input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="display:flex; flex-direction:column; justify-content: center; align-items: center; text-align: center;">
+    <div style="width: 80%">
+        <h1>Сортировка</h1>
+        <label>
+            <input type="text" id="filterInput" class="filter-input form__input" placeholder="Фильтр">
+        </label>
+
+        <table id="dataTable">
+            <thead>
+            <tr>
+                <th onclick="sortTable(0)">Имя</th>
+                <th onclick="sortTable(1)">Возраст</th>
+                <th onclick="sortTable(2)">Город</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Иван</td>
+                <td>25</td>
+                <td>Москва</td>
+            </tr>
+            <tr>
+                <td>Алексей</td>
+                <td>30</td>
+                <td>Санкт-Петербург</td>
+            </tr>
+            <tr>
+                <td>Елена</td>
+                <td>28</td>
+                <td>Киев</td>
+            </tr>
+            <tr>
+                <td>Ольга</td>
+                <td>22</td>
+                <td>Минск</td>
+            </tr>
+            <tr>
+                <td>Ольга</td>
+                <td>22</td>
+                <td>Минск</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script>
+    function sortTable(columnIndex) {
+        let table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("dataTable");
+        switching = true;
+
+        while (switching) {
+            switching = false;
+            rows = table.getElementsByTagName("tr");
+
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("td")[columnIndex];
+                y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+            }
+        }
+    }
+
+    document.getElementById("filterInput").addEventListener("input", function() {
+        let filterValue = this.value.toLowerCase();
+        let table = document.getElementById("dataTable");
+        let rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+            let rowData = rows[i].getElementsByTagName("td");
+            let showRow = false;
+
+            for (let j = 0; j < rowData.length; j++) {
+                let cellData = rowData[j].innerHTML.toLowerCase();
+
+                if (cellData.indexOf(filterValue) > -1) {
+                    showRow = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = showRow ? "" : "none";
+        }
+    });
+</script>
+</body>
+</html>
