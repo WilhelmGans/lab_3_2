@@ -3,3 +3,7 @@
     --color-silver-light: #ddd;
     --color-silver-light-2: #bebebe;
 }
+body {
+    margin: 0;
+    padding: 0;
+}
