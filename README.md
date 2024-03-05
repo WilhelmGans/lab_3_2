@@ -2186,14 +2186,20 @@ body {
 <h1 align = "center">Результат</h1>
 
 <ol>
-  <li>Повторите страницу по данному по образцу
-    <img src="report/1.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Повторите страницу по данному по образцу</div>
+        <img height="300px" width="400px" src="report/1.png">
+    </div>
   </li>
   <li>Повторите страницу по данному по образцу
   <img src="report/2.png">
   </li>
-  <li>Повторите страницу по данному по образцу
-    <img src="report/3.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Повторите страницу по данному по образцу</div>
+        <img height="300px" width="400px" src="report/3.png">
+    </div>
   </li>
   <li>Повторите страницу по данному по образцу
     <img src="report/4.png">
@@ -2203,75 +2209,131 @@ body {
         <div> Повторите страницу по данному по образцу</div>
         <img width="100px" src="report/5.png">
     </div>
-    
   </li>
   <li><div>Повторите страницу по данному по образцу</div>
     <img src="report/6.png">
   </li>
-  <li>Создать структуру HTML страницы с использованием заголовка, абзацев, списков и изображений.
-    <img src="report/7.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать структуру HTML страницы с использованием заголовка, абзацев, списков и изображений.</div>
+        <img height="300px" width="400px" src="report/7.png">
+    </div>
   </li>
-  <li>Вставить видео на страницу с помощью тега &lt;video&gt; и добавить управляющие элементы.
-    <img src="report/8.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Вставить видео на страницу с помощью тега &lt;video&gt; и добавить управляющие элементы.</div>
+        <img height="300px" width="400px" src="report/8.png">
+    </div>
   </li>
-  <li>Создать форму обратной связи с полями для ввода имени, email и сообщения.
-    <img src="report/9.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать форму обратной связи с полями для ввода имени, email и сообщения.</div>
+        <img height="300px" width="400px" src="report/9.png">
+    </div>
   </li>
-  <li>Разработать таблицу с данными о товарах (название, цена, описание) и стилизовать её с помощью CSS.
-    <img src="report/10.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Разработать таблицу с данными о товарах (название, цена, описание) и стилизовать её с помощью CSS.</div>
+        <img height="300px" width="400px" src="report/10.png">
+    </div>
   </li>
-  <li>Добавить на страницу интерактивную карту с маркерами и информацией о местоположении.
-    <img src="report/11.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Добавить на страницу интерактивную карту с маркерами и информацией о местоположении.</div>
+        <img height="300px" width="400px" src="report/11.png">
+    </div>
   </li>
-  <li>Реализовать выпадающее меню навигации с использованием HTML и CSS.
-    <img src="report/12.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Реализовать выпадающее меню навигации с использованием HTML и CSS.</div>
+        <img height="300px" width="400px" src="report/12.png">
+    </div>
   </li>
-  <li>Вставить аудио-плеер на страницу для воспроизведения музыкального трека.
-    <img src="report/13.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Вставить аудио-плеер на страницу для воспроизведения музыкального трека.</div>
+        <img height="300px" width="400px" src="report/13.png">
+    </div>
   </li>
-  <li>Создать галерею изображений с возможностью пролистывания и увеличения фотографий.
-    <img src="report/14.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать галерею изображений с возможностью пролистывания и увеличения фотографий.</div>
+        <img height="300px" width="700px" src="report/14.png">
+    </div>
   </li>
-  <li>Разработать форму заказа товара с выбором количества и кнопкой отправки заказа.
-    <img src="report/15.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Разработать форму заказа товара с выбором количества и кнопкой отправки заказа.</div>
+        <img height="300px" width="700px" src="report/15.png">
+    </div>
   </li>
-  <li>Использовать iframe для встраивания внешнего контента (например, карты Google или видео с YouTube).
-    <img src="report/16.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Использовать iframe для встраивания внешнего контента (например, карты Google или видео с YouTube).</div>
+        <img height="300px" width="400px" src="report/16.png">
+    </div>
   </li>
-  <li>Добавить на страницу анимированный слайдер с переходами между изображениями.
-    <img src="report/17.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Добавить на страницу анимированный слайдер с переходами между изображениями.</div>
+        <img height="300px" width="400px" src="report/17.png">
+    </div>
   </li>
-  <li>Реализовать функционал проверки вводимых данных в форме с помощью JavaScript.
-    <img src="report/18.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Реализовать функционал проверки вводимых данных в форме с помощью JavaScript.</div>
+        <img height="300px" width="400px" src="report/18.png">
+    </div>
   </li>
-  <li>Создать анимированное меню бургер для мобильной версии сайта.
-    <img src="report/19.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать анимированное меню бургер для мобильной версии сайта.</div>
+        <img height="300px" width="700px" src="report/19.png">
+    </div>
   </li>
-  <li>Использовать тег &lt;canvas&gt; для создания простой графики или анимации на странице.
-    <img src="report/20.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Использовать тег &lt;canvas&gt; для создания простой графики или анимации на странице.</div>
+        <img height="300px" width="400px" src="report/20.png">
+    </div>
   </li>
-  <li>Добавить на страницу элементы социальных сетей с возможностью перехода по ссылкам.
-    <img src="report/21.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Добавить на страницу элементы социальных сетей с возможностью перехода по ссылкам.</div>
+        <img height="300px" width="400px" src="report/21.png">
+    </div>
   </li>
-  <li>Разработать форму регистрации пользователей с проверкой пароля на соответствие требованиям.
-    <img src="report/22.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Разработать форму регистрации пользователей с проверкой пароля на соответствие требованиям.</div>
+        <img height="300px" width="400px" src="report/22.png">
+    </div>
   </li>
-  <li>Создать табличное представление данных с возможностью сортировки и фильтрации по столбцам.
-    <img src="report/23.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать табличное представление данных с возможностью сортировки и фильтрации по столбцам.</div>
+        <img height="300px" width="2000px" src="report/23.png">
+    </div>
   </li>
-  <li>Использовать Web-шрифты для стилизации текста на странице.
-    <img src="report/24.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Использовать Web-шрифты для стилизации текста на странице.</div>
+        <img height="300px" width="1000px" src="report/24.png">
+    </div>
   </li>
-  <li>Реализовать функционал Drag and Drop для перетаскивания элементов на странице.
-    <img src="report/25.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Реализовать функционал Drag and Drop для перетаскивания элементов на странице.</div>
+        <img height="300px" width="1000px" src="report/25.png">
+    </div>
   </li>
-  <li>Создать адаптивную веб-страницу, которая корректно отображается на разных устройствах и разрешениях экрана.
-    <img src="report/26.png">
+  <li>
+    <div style="display: flex; flex-direction: column">
+        <div> Создать адаптивную веб-страницу, которая корректно отображается на разных устройствах и разрешениях экрана.</div>
+        <img height="500px" width="600px" src="report/26.png">
+    </div>
   </li>
 </ol>
 
-<p align = "center"><img src="report/img_1.png" alt="first screen"><img src="report/img_2.png" alt="second screen"> <img src="report/img_3.png" alt="
-third screen"></p>
-
 <h1 align = "center">Вывод</h1>
-<p>По итогу проделанной лабораторной работы, была создана страница о себе.</p>
+<p>По итогу проделанной лабораторной работы, были созданы 26 страниц по заданиям с использованием HTML, CSS, JS</p>
