@@ -2153,7 +2153,7 @@ tbody tr:nth-child(odd) {
 }
 ```
 
-<h2 style="text-align: center">Файл style/btn.css</h2>
+<h2 style="text-align: center">Файл style/var.css</h2>
 
 ```css
 :root {
